@@ -18,6 +18,7 @@ let indexArray = [];
 let previousChars = [];
 
 // getting word
+// ######################################
 fetch('js/input/woerter.txt')
     .then(response => response.text())
     .then(data => { 
@@ -49,6 +50,7 @@ function checkWord(){
     }
 }
 
+// #######################################
 function hint(){
     displayHangman(); //calling display function
     generateRandomIndex(); // calling generate function
@@ -91,5 +93,5 @@ function checkNoRecall() {
         else return letterhintIndex;
     });
 }
-
+// #######################################
 
