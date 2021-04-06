@@ -31,40 +31,37 @@ fetch('js/input/woerter.txt')
         finalWord.forEach( () => {
             hiddenWord.push('______   ') //create placeholder array
         });
-        document.getElementById('ausgabe').innerHTML = hiddenWord.join('   '); 
-        ausgabe = hiddenWord
-        console.log(finalWord)
+        document.getElementById('ausgabe').innerHTML = hiddenWord.join('   '); // display array
+        ausgabe = hiddenWord 
+        console.log(finalWord) 
     })
-
 function checkWord(){
-    eingabe = document.getElementById('eingabe').value.toLowerCase();
-    document.getElementById('counter').innerHTML = counter;
-    let n = compareWord.localeCompare(eingabe); // wenn 0 dan gleich 
-    if (n === 0) {
+    eingabe = document.getElementById('eingabe').value.toLowerCase();  // declaring eingabe
+    document.getElementById('counter').innerHTML = counter; // setting counter on page
+    let n = compareWord.localeCompare(eingabe); // if 0 euqual 
+    if (n === 0) { 
         counter = 0;
         setTimeout( () => {
-            location.reload();
+            location.reload(); // set timeout
         }, 3000);  
     } else {
-        displayHangman();
+        displayHangman(); // calling displayHangman function
     }
 }
-
 // #######################################
 function hint(){
     displayHangman(); //calling display function
     generateRandomIndex(); // calling generate function
-    previousChars.push(finalWord[letterhintIndex]);
-    finalWord.forEach( (e,i) => {
+    previousChars.push(finalWord[letterhintIndex]); // push char to array to prevent stacking hints
+    finalWord.forEach( (e,i) => { //looping over finalword array and look for similar words
         if (e.toLowerCase() === finalWord[letterhintIndex]) ausgabe[i] = finalWord[i];   
     }); 
-    document.getElementById('ausgabe').innerHTML = ausgabe.join('   ');
+    document.getElementById('ausgabe').innerHTML = ausgabe.join('   '); // updating page
     console.log(ausgabe);
 }
-
-function displayHangman() {
-    counter++;
-    document.getElementById('counter').innerHTML = counter;
+function displayHangman() { // display Hangman function
+    counter++; // count up each time button is pressed
+    document.getElementById('counter').innerHTML = counter; // update counter on page
     if (counter === 1) document.getElementById('stroke-2').style.display = "inline";
     if (counter === 2) document.getElementById('stroke-3').style.display = "inline";
     if (counter === 3) document.getElementById('stroke-4').style.display = "inline";
@@ -73,24 +70,22 @@ function displayHangman() {
     if (counter === 6) document.getElementById('stroke-7').style.display = "inline";
     if (counter === 7) document.getElementById('stroke-8').style.display = "inline";
     if (counter === 8) document.getElementById('stroke-9').style.display = "inline";
-    if (counter === 9) {
-        document.getElementById('stroke-10').style.display = "inline";
-        counter = 0;
+    if (counter === 9) { // max count reached
+        document.getElementById('stroke-10').style.display = "inline"; // change display mode of last stroke
+        counter = 0; // set counter 0
         setTimeout( () => {
-            location.reload();
+            location.reload(); // reset page with delay
         }, 3000); 
     }
 }
-
-function generateRandomIndex(){
-    letterhintIndex = Math.floor(Math.random()*finalWord.length);
-    checkNoRecall();
+function generateRandomIndex(){ //generate random index
+    letterhintIndex = Math.floor(Math.random()*finalWord.length); //generate random index
+    checkNoRecall(); // calling noRecall function
 }
-
 function checkNoRecall() {
-    previousChars.forEach( e => {
+    previousChars.forEach( e => { //looping over previousChars to make sure no recall
         if (e === finalWord[letterhintIndex]) generateRandomIndex(); // calling generate function
-        else return letterhintIndex;
+        else return letterhintIndex; // returning a non used index and char
     });
 }
 // #######################################
