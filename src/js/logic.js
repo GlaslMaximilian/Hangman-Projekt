@@ -11,6 +11,7 @@ let divausgabe;
 let id;
 let letterhintIndex;
 let strokes;
+
 // arrays
 let hiddenWord = [];
 let indexArray = [];
