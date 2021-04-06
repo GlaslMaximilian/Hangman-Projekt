@@ -1,4 +1,5 @@
 // variables
+let counterP
 let letters;
 let words;
 let finalWord;
@@ -9,7 +10,7 @@ let ausgabe;
 let divausgabe;
 let id;
 let letterhintIndex;
-
+let strokes;
 // arrays
 let hiddenWord = [];
 let indexArray = [];
@@ -38,13 +39,10 @@ function checkWord(){
     document.getElementById('counter').innerHTML = counter;
     let n = compareWord.localeCompare(eingabe); // wenn 0 dan gleich 
     if (n === 0) {
-        //#########
-        //ANIMATION
-        //#########
         counter = 0;
         setTimeout( () => {
             location.reload();
-        }, 3000);   
+        }, 3000);  
     } else {
         displayHangman();
     }
@@ -92,4 +90,5 @@ function checkNoRecall() {
         else return letterhintIndex;
     });
 }
+
 
