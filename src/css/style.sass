@@ -1,0 +1,166 @@
+$background: #212121
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+  
+body
+    background-color: $background
+    color: $white
+    font-family: 'Montserrat', sans-serif;
+    height: 97vh
+    width: 97vw
+
+    .main-content
+        width: 100%
+        justify-content: center
+        align-items: center
+        display: flex
+        flex-direction: column
+
+        .header
+            justify-content: center
+            align-content: center
+            display: flex
+            padding-top: 20px
+
+            h1
+                letter-spacing: 7px
+                font-weight: 100
+
+        .drawing 
+            width: 900px
+            justify-content: center
+            align-content: center
+            display: flex
+
+            p
+                position: absolute
+                top: 200px
+                right: 11rem
+                font-size: 20px
+                font-weight: 500
+
+            svg
+                height: 600px
+                width: 900px
+
+                #stroke-2
+                    display: none
+                
+                #stroke-3
+                    display: none
+
+                #stroke-4
+                    display: none
+                
+                #ellipse
+                    display: none
+                
+                #stroke-6
+                    display: none
+
+                #stroke-7
+                    display: none
+
+                #stroke-8
+                    display: none
+
+                #stroke-9
+                    display: none
+
+                #stroke-10
+                    display: none
+
+        .ausgabe
+            // background-color: #797979
+            width: 700px
+            height: 90px
+            justify-content: center
+            align-items: center
+            display: flex
+
+        .form__group
+            position: relative
+            padding: 15px 0 0
+            margin-top: 10px
+            width: 1000px
+            justify-content: center
+            align-items: center
+            display: flex
+            flex-direction: column
+
+            .form__field
+                width: 700px
+                border: 0
+                border-bottom: 2px solid $gray
+                outline: 0
+                font-size: 1.3rem
+                color: $white
+                padding: 7px 0
+                background: transparent
+                transition: border-color 0.2s
+
+                &::placeholder 
+                    color: transparent
+
+                &::placeholder-shown ~ .form__label
+                    font-size: 1.3rem
+                    cursor: text
+                    top: 20px
+
+            .form__field:focus
+                ~.form__label
+                    position: absolute
+                    top: 0
+                    display: block
+                    transition: 0.2s
+                    font-size: 1rem
+                    color: $primary
+                    font-weight: 400
+                padding-bottom: 6px
+                font-weight: 400
+                border-width: 3px
+                border-image: linear-gradient(to right, $primary, $secondary)
+                border-image-slice: 1
+
+            .form__field
+                &:required,&:invalid
+                    box-shadow: none
+
+            .form__label
+                position: absolute
+                top: 0
+                display: block
+                transition: 0.2s
+                font-size: 1rem
+                color: $gray
+
+            .btn-div
+                margin: 20px
+                width: 700px
+                position: absolute
+                align-items: center
+                justify-content: center
+                display: flex
+                flex-direction: row
+
+                .btn
+                    margin-left: 30px
+                    background: none
+                    font-size: 1rem
+                    color: $white
+                    border-color: $gray
+                    border: 2px solid
+                    width: 144px
+                    height: 42px
+                    letter-spacing: 2px
+                    transition-duration: .4s
+                    border-radius: 5px
+                    text-transform: uppercase
+                    font-weight: 300
+
+                .btn:hover
+                    cursor: pointer
+                    background: linear-gradient(to right,$secondary, $primary)
+                

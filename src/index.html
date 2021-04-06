@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangman</title>
+
+    <!-- jQuerry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- linking fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    
+    <!-- Content Start -->
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Hangman</h1>
+        </div>
+        <div class="drawing">
+
+            <p>counter: <span id="counter">0</span></p>
+            
+            <!-- full hangman -->
+            <div class="full-hangman">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080"><defs><clipPath id="b"><rect width="1920" height="1080"/></clipPath></defs>
+                    <g id="a" clip-path="url(#b)">
+                        <line x2="665.395" transform="translate(589.5 857.002)" fill="none" stroke="#fff" stroke-width="3" id="stroke-1"/>
+                        <line y1="634.502" transform="translate(922.198 222.5)" fill="none" stroke="#fff" stroke-width="3" id="stroke-2"/>
+                        <line x1="313.686" transform="translate(922.198 222.5)" fill="none" stroke="#fff" stroke-width="3" id="stroke-3"/>
+                        <line y2="80.798" transform="translate(1235.884 222.5)" fill="none" stroke="#fff" stroke-width="3" id="stroke-4"/>
+                        <g transform="translate(1185 304)" fill="none" stroke="#fff" stroke-width="3" id="ellipse">
+                            <ellipse cx="52" cy="52.5" rx="52" ry="52.5" stroke="none"/>
+                            <ellipse cx="52" cy="52.5" rx="50.5" ry="51" fill="none"/>
+                        </g>
+                        <line y2="171.102" transform="translate(1235.884 410.237)" fill="none" stroke="#fff" stroke-width="3" id="stroke-6"/>
+                        <line y1="73.669" x2="95.056" transform="translate(1235.884 410.237)" fill="none" stroke="#fff" stroke-width="3" id="stroke-7"/>
+                        <line x1="92.68" y1="73.669" transform="translate(1143.204 410.237)" fill="none" stroke="#fff" stroke-width="3" id="stroke-8"/>
+                        <line x2="54.657" y2="71.292" transform="translate(1235.884 581.338)" fill="none" stroke="#fff" stroke-width="3" id="stroke-9"/>
+                        <line y1="71.292" x2="49.905" transform="translate(1185.979 581.338)" fill="none" stroke="#fff" stroke-width="3" id="stroke-10"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="ausgabe">
+            <span id="ausgabe"></span>
+        </div>  
+        <div class="form__group field">
+            <form onsubmit="return false">
+                <input type="input" class="form__field" placeholder="Name" name="name" id='eingabe' required />
+                <label for="name" class="form__label">Eingabe</label>
+                <div class="btn-div">
+                    <button class="btn" id="hint-btn" onclick="hint()">hint</button>
+                    <button class="btn" id="submit-btn" onclick="checkWord()">check</button>
+                </div> 
+            </form>
+        </div>
+    </div>
+
+    <!-- Content End -->
+    
+    <!-- JavaScript -->
+    <script src="js/logic.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+        <clipPath id="b">
+            <rect width="1920" height="1080"/>
+        </clipPath>
+    </defs>
+    <g id="a" clip-path="url(#b)">
+        <line x2="665.395" transform="translate(589.5 857.002)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line y1="634.502" transform="translate(922.198 222.5)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line x1="313.686" transform="translate(922.198 222.5)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line y2="80.798" transform="translate(1235.884 222.5)" fill="none" stroke="#fff" stroke-width="3"/>
+        <g transform="translate(1185 304)" fill="none" stroke="#fff" stroke-width="3">
+            <ellipse cx="52" cy="52.5" rx="52" ry="52.5" stroke="none"/>
+            <ellipse cx="52" cy="52.5" rx="50.5" ry="51" fill="none"/>
+        </g>
+        <line y2="171.102" transform="translate(1235.884 410.237)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line y1="73.669" x2="95.056" transform="translate(1235.884 410.237)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line x1="92.68" y1="73.669" transform="translate(1143.204 410.237)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line x2="54.657" y2="71.292" transform="translate(1235.884 581.338)" fill="none" stroke="#fff" stroke-width="3"/>
+        <line y1="71.292" x2="49.905" transform="translate(1185.979 581.338)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+</svg>

@@ -1,0 +1,268 @@
+body {
+  background-color: #212121;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  height: 97vh;
+  width: 97vw;
+}
+
+body .main-content {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main-content .header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+body .main-content .header h1 {
+  letter-spacing: 7px;
+  font-weight: 100;
+}
+
+body .main-content .drawing {
+  width: 900px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main-content .drawing p {
+  position: absolute;
+  top: 200px;
+  right: 11rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+body .main-content .drawing svg {
+  height: 600px;
+  width: 900px;
+}
+
+body .main-content .drawing svg #stroke-2 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-3 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-4 {
+  display: none;
+}
+
+body .main-content .drawing svg #ellipse {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-6 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-7 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-8 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-9 {
+  display: none;
+}
+
+body .main-content .drawing svg #stroke-10 {
+  display: none;
+}
+
+body .main-content .ausgabe {
+  width: 700px;
+  height: 90px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main-content .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 1000px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main-content .form__group .form__field {
+  width: 700px;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+body .main-content .form__group .form__field::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body .main-content .form__group .form__field:-ms-input-placeholder {
+  color: transparent;
+}
+
+body .main-content .form__group .form__field::-ms-input-placeholder {
+  color: transparent;
+}
+
+body .main-content .form__group .form__field::placeholder {
+  color: transparent;
+}
+
+body .main-content .form__group .form__field::-webkit-input-placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+body .main-content .form__group .form__field:-ms-input-placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+body .main-content .form__group .form__field::-ms-input-placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+body .main-content .form__group .form__field::placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+body .main-content .form__group .form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 400;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+body .main-content .form__group .form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 400;
+}
+
+body .main-content .form__group .form__field:required, body .main-content .form__group .form__field:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .main-content .form__group .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+body .main-content .form__group .btn-div {
+  margin: 20px;
+  width: 700px;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .main-content .form__group .btn-div .btn {
+  margin-left: 30px;
+  background: none;
+  font-size: 1rem;
+  color: #fff;
+  border-color: #9b9b9b;
+  border: 2px solid;
+  width: 144px;
+  height: 42px;
+  letter-spacing: 2px;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+body .main-content .form__group .btn-div .btn:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#38ef7d), to(#11998e));
+  background: linear-gradient(to right, #38ef7d, #11998e);
+}
+/*# sourceMappingURL=style.css.map */
