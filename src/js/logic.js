@@ -38,7 +38,7 @@ fetch('js/input/woerter.txt')
 function checkWord(){
     eingabe = document.getElementById('eingabe').value.toLowerCase();  // declaring eingabe
     document.getElementById('counter').innerHTML = counter; // setting counter on page
-    let n = compareWord.localeCompare(eingabe); // if 0 euqual 
+    let n = compareWord.localeCompare(eingabe); // if euqual to 0  
     if (n === 0) { 
         counter = 0;
         setTimeout( () => {
