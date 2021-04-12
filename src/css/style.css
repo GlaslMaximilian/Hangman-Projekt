@@ -209,11 +209,6 @@ body .main-content .form__group .form__field:focus ~ .form__label {
   font-weight: 400;
 }
 
-body .main-content .form__group .form__field:required, body .main-content .form__group .form__field:invalid {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 body .main-content .form__group .form__label {
   position: absolute;
   top: 0;

@@ -26,20 +26,20 @@ fetch('js/input/woerter.txt')
         let word_ = e => {
             return e[Math.floor(Math.random()*e.length)] //randomize words
         }
-        compareWord = word_(words).trim().toLowerCase(); //split word into chars
-        finalWord = compareWord.split(''); //remove last index
+        compareWord = word_(words).trim().toLowerCase(); //remove last index
+        finalWord = compareWord.split(''); //split word into chars
         finalWord.forEach( () => {
             hiddenWord.push('______   ') //create placeholder array
         });
         document.getElementById('ausgabe').innerHTML = hiddenWord.join('   '); // display array
         ausgabe = hiddenWord 
-        console.log(finalWord) 
     })
+
 function checkWord(){
     eingabe = document.getElementById('eingabe').value.toLowerCase();  // declaring eingabe
     document.getElementById('counter').innerHTML = counter; // setting counter on page
     let n = compareWord.localeCompare(eingabe); // if euqual to 0  
-    if (n === 0) { 
+    if (n === 0) { //richtiger guess
         counter = 0;
         setTimeout( () => {
             location.reload(); // set timeout
@@ -59,6 +59,7 @@ function hint(){
     document.getElementById('ausgabe').innerHTML = ausgabe.join('   '); // updating page
     console.log(ausgabe);
 }
+
 function displayHangman() { // display Hangman function
     counter++; // count up each time button is pressed
     document.getElementById('counter').innerHTML = counter; // update counter on page
@@ -78,6 +79,7 @@ function displayHangman() { // display Hangman function
         }, 3000); 
     }
 }
+
 function generateRandomIndex(){ //generate random index
     letterhintIndex = Math.floor(Math.random()*finalWord.length); //generate random index
     checkNoRecall(); // calling noRecall function
@@ -90,3 +92,6 @@ function checkNoRecall() {
 }
 // #######################################
 
+// [w,a,a,g,e]
+
+//  w, __, __, __, __

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hangman</title>
-
-    <!-- jQuerry -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
@@ -15,8 +12,10 @@
     <!-- linking fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    
 </head>
 <body>
+    
     
     <!-- Content Start -->
     
@@ -54,7 +53,7 @@
         </div>  
         <div class="form__group field">
             <form onsubmit="return false">
-                <input type="input" class="form__field" placeholder="Name" name="name" id='eingabe' required />
+                <input type="input" class="form__field" placeholder="Eingabe" name="Eingabe" id='eingabe' required/>
                 <label for="name" class="form__label">Eingabe</label>
                 <div class="btn-div">
                     <button class="btn" id="hint-btn" onclick="hint()">hint</button>
