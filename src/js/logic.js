@@ -21,18 +21,21 @@ let previousChars = [];
 // ######################################
 fetch('js/input/woerter.txt')
     .then(response => response.text())
-    .then(data => { 
+    .then(data => {
+        // console.log(data)
         words = data.split('\n'); //formatieren der Textdatei
+        // console.log(words)
         let word_ = e => {
-            return e[Math.floor(Math.random()*e.length)] //randomize words
+            return e[Math.floor(Math.random()*e.length)] //get random word
         }
         compareWord = word_(words).trim().toLowerCase(); //remove last index
         finalWord = compareWord.split(''); //split word into chars
+        console.log(finalWord)
         finalWord.forEach( () => {
             hiddenWord.push('______   ') //create placeholder array
         });
         document.getElementById('ausgabe').innerHTML = hiddenWord.join('   '); // display array
-        ausgabe = hiddenWord 
+        ausgabe = hiddenWord; 
     })
 
 function checkWord(){
